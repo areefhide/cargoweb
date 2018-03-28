@@ -15,6 +15,8 @@ import { ProjectListComponent } from './components/projects/project-list/project
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CompanyListComponent } from './components/company/company-list/company-list.component';
 import { CompanyComponent } from './components/company/company/company.component';
+import { AgentListComponent } from './components/agent/agent-list/agent-list.component';
+import { AgentComponent } from './components/agent/agent/agent.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { CompanyComponent } from './components/company/company/company.component
     ProjectListComponent,
     DashboardComponent,
     CompanyListComponent,
-    CompanyComponent
+    CompanyComponent,
+    AgentListComponent,
+    AgentComponent
   ],
   imports: [
     BrowserModule,
