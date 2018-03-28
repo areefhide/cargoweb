@@ -20,7 +20,7 @@
           <form name="form" novalidate>
             <div class="form-group has-feedback">
               <label for="exampleInputEmail1">Company Name</label>
-              <input type="text" class="form-control" name="companyName">
+              <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="CompanyName"  name="CompanyName">
               <span class="glyphicon glyphicon-book form-control-feedback"></span>
             </div>
             <div class="row">
@@ -29,7 +29,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                  <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-save"></i></button>
+                  <button type="submit" (click)="create()" class="btn btn-primary btn-block btn-flat"><i class="fa fa-save"></i></button>
                 </div>
               <!-- /.col -->
               </div>
