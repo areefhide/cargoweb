@@ -17,6 +17,8 @@ import { CompanyListComponent } from './components/company/company-list/company-
 import { CompanyComponent } from './components/company/company/company.component';
 import { AgentListComponent } from './components/agent/agent-list/agent-list.component';
 import { AgentComponent } from './components/agent/agent/agent.component';
+import { KurirListComponent } from './components/kurir/kurir-list/kurir-list.component';
+import { KurirComponent } from './components/kurir/kurir/kurir.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { AgentComponent } from './components/agent/agent/agent.component';
     CompanyListComponent,
     CompanyComponent,
     AgentListComponent,
-    AgentComponent
+    AgentComponent,
+    KurirListComponent,
+    KurirComponent
   ],
   imports: [
     BrowserModule,
