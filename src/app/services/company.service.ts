@@ -9,13 +9,16 @@ export class CompanyService {
 
   constructor(private http: HttpClient) { }
   create(companyName: string){
-     return this.http.post<any>(AppSettings.API_ENDPOINT + '/company',{nama: companyName})
+     return this.http.post<any>(AppSettings.API_ENDPOINT + 'company',{nama: companyName})
      .map(data =>{
        return data;
      });
   }
   get(){
-
+    return this.http.get<any[]>(AppSettings.API_ENDPOINT + 'company')
+    .map(data=>{
+      return data;
+    });
   }
 
 }

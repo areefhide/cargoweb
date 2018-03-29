@@ -9,9 +9,16 @@ import {CompanyService} from '../../../services/company.service';
 })
 export class CompanyListComponent implements OnInit {
 
+  company : any[] = [];
   constructor(private comserv: CompanyService,private router: Router) { }
 
   ngOnInit() {
+    this.loadCompany();
   }
 
+  private loadCompany(){
+    this.comserv.get().subscribe(data=>{
+      this.company = data;
+    });
+  }
 }
