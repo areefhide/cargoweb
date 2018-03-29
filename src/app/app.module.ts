@@ -19,6 +19,7 @@ import { AgentListComponent } from './components/agent/agent-list/agent-list.com
 import { AgentComponent } from './components/agent/agent/agent.component';
 import { KurirListComponent } from './components/kurir/kurir-list/kurir-list.component';
 import { KurirComponent } from './components/kurir/kurir/kurir.component';
+import { AppSettingsComponent } from './class/app-settings/app-settings.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { KurirComponent } from './components/kurir/kurir/kurir.component';
     AgentListComponent,
     AgentComponent,
     KurirListComponent,
-    KurirComponent
+    KurirComponent,
+    AppSettingsComponent
   ],
   imports: [
     BrowserModule,
