@@ -20,6 +20,9 @@ import { AgentComponent } from './components/agent/agent/agent.component';
 import { KurirListComponent } from './components/kurir/kurir-list/kurir-list.component';
 import { KurirComponent } from './components/kurir/kurir/kurir.component';
 import { AppSettingsComponent } from './class/app-settings/app-settings.component';
+import { ProjectComponent } from './components/projects/project/project.component';
+import { PengirimanListComponent } from './components/pengiriman/pengiriman-list/pengiriman-list.component';
+import { PengirimanComponent } from './components/pengiriman/pengiriman/pengiriman.component';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { AppSettingsComponent } from './class/app-settings/app-settings.componen
     AgentComponent,
     KurirListComponent,
     KurirComponent,
-    AppSettingsComponent
+    AppSettingsComponent,
+    ProjectComponent,
+    PengirimanListComponent,
+    PengirimanComponent
   ],
   imports: [
     BrowserModule,
