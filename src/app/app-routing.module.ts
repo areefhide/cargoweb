@@ -11,6 +11,9 @@ import {CompanyListComponent} from './components/company/company-list/company-li
 import{ CompanyComponent} from './components/company/company/company.component';
 //project
 import {ProjectListComponent} from './components/projects/project-list/project-list.component';
+//pengiriman
+import {PengirimanComponent} from './components/pengiriman/pengiriman/pengiriman.component';
+import {PengirimanListComponent} from './components/pengiriman/pengiriman-list/pengiriman-list.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,canActivate:[AuthGuard],canActivateChild: [AuthGuard],
@@ -19,7 +22,8 @@ const routes: Routes = [
       {path:'dashboard',component:DashboardComponent},
       {path:'Companylist', component:CompanyListComponent},
       {path:'Company', component:CompanyComponent},
-      {path: 'ProjectList',component:ProjectListComponent}
+      {path: 'ProjectList',component:ProjectListComponent},
+      {path:'PengirimanList',component:PengirimanListComponent}
     ]
   },
   {path: 'login', component: LoginComponent}
