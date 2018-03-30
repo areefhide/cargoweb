@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import {AngularMultiSelectModule} from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import {AuthGuard} from './auth/auth.guard';
@@ -48,7 +49,8 @@ import { PengirimanComponent } from './components/pengiriman/pengiriman/pengirim
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularMultiSelectModule
   ],
   providers: [
     AuthService,AuthGuard,CompanyService,
