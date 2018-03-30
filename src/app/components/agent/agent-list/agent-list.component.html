@@ -1,3 +1,32 @@
-<p>
-  agent-list works!
-</p>
+<section class="content-header">
+  <h1>
+    Agent
+    <small>List</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Agent</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Agent List</h3>
+          <div class="box-tools"><a [routerLink]="['/Mitra']" class="btn btn-default"><i class="fa fa-plus"></i></a></div>
+        </div>
+        <div class="box-body">
+          <table class="table table-bordered">
+            <tr>
+              <th style="width: 10px">#</th>
+              <th>Nama</th>  
+              <th>PIC</th> 
+              <th style="width: 20px"></th>                
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

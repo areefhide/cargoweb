@@ -20,7 +20,13 @@
               <table class="table table-bordered">
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>Company</th>                  
+                  <th>Company</th>  
+                  <th style="width: 20px"></th>                
+                </tr>
+                <tr *ngFor="let item of company; let i = index">
+                  <td>{{i+1}}</td>
+                  <td>{{ item.nama}}</td>
+                  <td><a class="btn btn-default"><i class="fa fa-minus"></i></a></td>
                 </tr>
               </table>
             </div>

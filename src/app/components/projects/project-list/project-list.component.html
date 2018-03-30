@@ -10,11 +10,11 @@
 </section>
 <section class="content">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="box">
           <div class="box-header with-border">
             <h3 class="box-title">Project List</h3>
-            <div class="box-tools"><a [routerLink]="['/Company']" class="btn btn-default"><i class="fa fa-plus"></i></a></div>
+            <div class="box-tools"><a [routerLink]="['/Project']" class="btn btn-default"><i class="fa fa-plus"></i></a></div>
           </div>
           <div class="box-body">
             <table class="table table-bordered">
@@ -25,7 +25,18 @@
                 <th>mulai</th>
                 <th>berakhir</th> 
                 <th>nilai</th>   
-                <th>sisa</th>             
+                <th>sisa</th>
+                <th style="width: 20px"></th>             
+              </tr>
+              <tr *ngFor="let item of data; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{ item.nama }}</td>
+                <td>{{ item.perusahaan }}</td>
+                <td>{{ item.mulai }}</td>
+                <td>{{ item.berakhir }}</td>
+                <td>{{ item.nilai }}</td>
+                <td>{{ item.sisa }}</td>
+                <td><a class="btn btn-default"><i class="fa fa-minus"></i></a></td>
               </tr>
             </table>
           </div>

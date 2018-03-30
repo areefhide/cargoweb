@@ -11,9 +11,13 @@ import {CompanyListComponent} from './components/company/company-list/company-li
 import{ CompanyComponent} from './components/company/company/company.component';
 //project
 import {ProjectListComponent} from './components/projects/project-list/project-list.component';
+import {ProjectComponent} from './components/projects/project/project.component';
 //pengiriman
 import {PengirimanComponent} from './components/pengiriman/pengiriman/pengiriman.component';
 import {PengirimanListComponent} from './components/pengiriman/pengiriman-list/pengiriman-list.component';
+//mitra
+import {AgentListComponent} from './components/agent/agent-list/agent-list.component';
+import {AgentComponent} from './components/agent/agent/agent.component'
 
 const routes: Routes = [
   {path: '', component: HomeComponent,canActivate:[AuthGuard],canActivateChild: [AuthGuard],
@@ -23,7 +27,10 @@ const routes: Routes = [
       {path:'Companylist', component:CompanyListComponent},
       {path:'Company', component:CompanyComponent},
       {path: 'ProjectList',component:ProjectListComponent},
-      {path:'PengirimanList',component:PengirimanListComponent}
+      {path:'Project',component:ProjectComponent},
+      {path:'PengirimanList',component:PengirimanListComponent},
+      {path: 'Mitra', component: AgentComponent},
+      {path: 'MitraList', component: AgentListComponent}
     ]
   },
   {path: 'login', component: LoginComponent}

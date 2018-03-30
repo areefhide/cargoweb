@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {AuthGuard} from './auth/auth.guard';
 import { AuthService} from './auth/auth.service';
 import {CompanyService} from './services/company.service';
+import {ProjectService} from './services/project.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -49,7 +50,10 @@ import { PengirimanComponent } from './components/pengiriman/pengiriman/pengirim
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthService,AuthGuard,CompanyService],
+  providers: [
+    AuthService,AuthGuard,CompanyService,
+    ProjectService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
