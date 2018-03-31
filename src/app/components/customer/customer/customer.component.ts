@@ -15,14 +15,21 @@ import {Customer} from '../../../class/customer';
 export class CustomerComponent implements OnInit {
 
   customer : Customer;
-  constructor() {
+  constructor(private router: Router, private http: HttpClient) {
     this.customer = new Customer();
    }
 
   ngOnInit() {
   }
   create(){
-    
+    this.http.post<ResponseData>(AppSettings.API_ENDPOINT + '',this.customer)
+    .map(data=>{
+      return data.data;
+    }).subscribe(
+      data =>{
+        this.router.navigate(['/CustomerList']);
+      }
+    );
   }
 
 }
