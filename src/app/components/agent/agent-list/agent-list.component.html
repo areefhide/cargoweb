@@ -28,7 +28,7 @@
               <td>{{i+1}}</td>
               <td>{{ item.nama}}</td>
               <td>{{ item.pic }}</td>
-              <td><a class="btn btn-default"><i class="fa fa-minus"></i></a></td>
+              <td><a class="btn btn-default"(click)="deleteAgent(item._id)"><i class="fa fa-minus"></i></a></td>
             </tr>
           </table>
         </div>

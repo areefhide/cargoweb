@@ -25,6 +25,8 @@ import { AppSettingsComponent } from './class/app-settings/app-settings.componen
 import { ProjectComponent } from './components/projects/project/project.component';
 import { PengirimanListComponent } from './components/pengiriman/pengiriman-list/pengiriman-list.component';
 import { PengirimanComponent } from './components/pengiriman/pengiriman/pengiriman.component';
+import { CustomerComponent } from './components/customer/customer/customer.component';
+import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { PengirimanComponent } from './components/pengiriman/pengiriman/pengirim
     AppSettingsComponent,
     ProjectComponent,
     PengirimanListComponent,
-    PengirimanComponent
+    PengirimanComponent,
+    CustomerComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,

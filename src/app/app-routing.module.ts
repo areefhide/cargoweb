@@ -17,7 +17,10 @@ import {PengirimanComponent} from './components/pengiriman/pengiriman/pengiriman
 import {PengirimanListComponent} from './components/pengiriman/pengiriman-list/pengiriman-list.component';
 //mitra
 import {AgentListComponent} from './components/agent/agent-list/agent-list.component';
-import {AgentComponent} from './components/agent/agent/agent.component'
+import {AgentComponent} from './components/agent/agent/agent.component';
+//customer
+import { CustomerComponent } from './components/customer/customer/customer.component';
+import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,canActivate:[AuthGuard],canActivateChild: [AuthGuard],
@@ -31,7 +34,9 @@ const routes: Routes = [
       {path: 'Pengiriman',component:PengirimanComponent},
       {path:'PengirimanList',component:PengirimanListComponent},
       {path: 'Mitra', component: AgentComponent},
-      {path: 'MitraList', component: AgentListComponent}
+      {path: 'MitraList', component: AgentListComponent},
+      {path: 'Customer', component: CustomerComponent},
+      {path: 'CustomerList',component: CustomerListComponent}
     ]
   },
   {path: 'login', component: LoginComponent}
