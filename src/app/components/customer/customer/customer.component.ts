@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {Router, ActivatedRoute} from '@angular/router';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import { AppSettings } from '../../../class/app-settings';
+import { ResponseData } from '../../../class/response';
+import {Customer} from '../../../class/customer';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +14,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
+  customer : Customer;
+  constructor() {
+    this.customer = new Customer();
+   }
 
   ngOnInit() {
+  }
+  create(){
+    
   }
 
 }

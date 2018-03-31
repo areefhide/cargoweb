@@ -1,3 +1,56 @@
-<p>
-  customer works!
-</p>
+<section class="content-header">
+  <h1>
+    Customer
+    <small>Control panel</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Customer</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Customer</h3>
+          <div class="box-tools"><a [routerLink]="['/CustomerList']" class="btn btn-default"><i class="fa fa-arrow-left"></i></a></div>
+        </div>
+        <div class="box-body">
+          <form name="form" novalidate>
+            <div class="form-group has-feedback">
+              <label for="nama">Customer Name</label>
+              <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="customer.nama"  name="customer.nama">
+              <span class="glyphicon glyphicon-book form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="nama">Address</label>
+              <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="customer.alamat"  name="customer.alamat">
+              <span class="glyphicon glyphicon-book form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="nama">Company Name</label>
+              <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="customer.perusahaan"  name="customer.perusahaan">
+              <span class="glyphicon glyphicon-book form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="nama">Phone No</label>
+              <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="customer.telepon"  name="customer.telepon">
+              <span class="glyphicon glyphicon-book form-control-feedback"></span>
+            </div>
+            <div class="row">
+              <div class="col-xs-8">
+                
+              </div>
+              <!-- /.col -->
+              <div class="col-xs-4">
+                <button type="submit" (click)="create()" class="btn btn-primary btn-block btn-flat"><i class="fa fa-save"></i></button>
+              </div>
+            <!-- /.col -->
+            </div>
+          </form>
+        </div>
+      </div>      
+    </div>
+  </div>
+</section>
