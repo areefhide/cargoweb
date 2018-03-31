@@ -24,6 +24,12 @@
               <th>PIC</th> 
               <th style="width: 20px"></th>                
             </tr>
+            <tr *ngFor="let item of mitra;let i = index">
+              <td>{{i+1}}</td>
+              <td>{{ item.nama}}</td>
+              <td>{{ item.pic }}</td>
+              <td><a class="btn btn-default"><i class="fa fa-minus"></i></a></td>
+            </tr>
           </table>
         </div>
       </div>

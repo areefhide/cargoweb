@@ -1,3 +1,94 @@
-<p>
-  pengiriman works!
-</p>
+<section class="content-header">
+  <h1>
+    Pengiriman
+    <small>List</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Pengiriman</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-primary">
+        <div class="box-header">
+          <h3 class="box-title">Paket</h3>
+        </div>
+        <div class="box-body">
+          <div class="form-group col-md-3">
+            <label for="">Origin</label>
+            <select name="" id="" class="form-control"></select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">Agent</label>
+            <select name="" id="" class="form-control"></select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">Destination</label>
+            <select name="" id="" class="form-control"></select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">Date</label>
+            <input type="datetime" class="form-control" name="" id="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-primary">
+        <div class="box-body">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Pengirim</label>
+              <select class="form-control">              
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Penerima</label>
+              <select class="form-control">              
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">List Items</h3>
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <tr>
+                <th>
+                  Content
+                </th>
+                <th style="width: 60px">Quantity</th>
+                <th style="width: 60px">Weight</th>
+                <th style="width: 10px"></th>
+              </tr>
+              <tr>
+                <td><input type="text" [(ngModel)]="item.isi" class="form-control" placeholder="Content"></td>
+                <td><input type="number" [(ngModel)]="item.jumlah" class="form-control" placeholder="Qty"></td>
+                <td><input type="number" [(ngModel)]="item.berat" class="form-control" placeholder="Weight"></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

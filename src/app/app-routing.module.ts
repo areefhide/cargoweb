@@ -28,6 +28,7 @@ const routes: Routes = [
       {path:'Company', component:CompanyComponent},
       {path: 'ProjectList',component:ProjectListComponent},
       {path:'Project',component:ProjectComponent},
+      {path: 'Pengiriman',component:PengirimanComponent},
       {path:'PengirimanList',component:PengirimanListComponent},
       {path: 'Mitra', component: AgentComponent},
       {path: 'MitraList', component: AgentListComponent}
