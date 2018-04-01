@@ -16,6 +16,7 @@ import {Agent} from '../../../class/agent';
 export class PengirimanComponent implements OnInit {
   cities: any[];
   mitra : any[];
+  customer: any[];
   item : ItemContent;
   items: ItemContent[] = [];
   constructor(private router: Router, private http: HttpClient) { 
@@ -26,6 +27,7 @@ export class PengirimanComponent implements OnInit {
   ngOnInit() {
     this.getCities();
     this.getallAgent();
+    this.getCustomer();
   }
 
   addItem(){
@@ -62,6 +64,17 @@ export class PengirimanComponent implements OnInit {
 
   back(){
     this.router.navigate(['/PengirimanList']);
+  }
+
+  private getCustomer(){
+    this.http.get<ResponseData>(AppSettings.API_ENDPOINT + 'customer?limit=10000')
+    .map(data=>{
+      return data.data.docs;
+    }).subscribe(
+      data=>{
+        this.customer = data;
+      }
+    );
   }
   
 

@@ -22,7 +22,7 @@ export class CustomerComponent implements OnInit {
   ngOnInit() {
   }
   create(){
-    this.http.post<ResponseData>(AppSettings.API_ENDPOINT + '',this.customer)
+    this.http.post<ResponseData>(AppSettings.API_ENDPOINT + 'customer',this.customer)
     .map(data=>{
       return data.data;
     }).subscribe(
