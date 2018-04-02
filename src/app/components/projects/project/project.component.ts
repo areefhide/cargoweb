@@ -24,7 +24,7 @@ export class ProjectComponent implements OnInit {
     this.getCompany();
   }
 
-  private create(){
+  create(){
     this.http.post<any>(AppSettings.API_ENDPOINT + 'project',this.project)
     .subscribe(data => {
       console.log(data);
