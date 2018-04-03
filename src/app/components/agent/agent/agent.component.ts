@@ -37,7 +37,7 @@ export class AgentComponent implements OnInit {
     });
   }
 
-  private create(){
+  create(){
     console.log(this.mitra);
     this.createUser();
   }
