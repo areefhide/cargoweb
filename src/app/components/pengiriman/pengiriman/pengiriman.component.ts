@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import { AppSettings } from '../../../class/app-settings';
 import { ResponseData } from '../../../class/response';
 import {Agent} from '../../../class/agent';
+import {Paket} from '../../../class/paket';
 
 @Component({
   selector: 'app-pengiriman',
@@ -17,10 +18,15 @@ export class PengirimanComponent implements OnInit {
   cities: any[];
   mitra : any[];
   customer: any[];
+  project: any[];
   item : ItemContent;
   items: ItemContent[] = [];
+  paid = true;
+  debt = false;
+  paket: Paket;
   constructor(private router: Router, private http: HttpClient) { 
     this.item = new ItemContent();
+    this.paket = new Paket();
     this.items;
   }
 
@@ -28,6 +34,7 @@ export class PengirimanComponent implements OnInit {
     this.getCities();
     this.getallAgent();
     this.getCustomer();
+    this.getProject();
   }
 
   addItem(){
@@ -75,6 +82,17 @@ export class PengirimanComponent implements OnInit {
         this.customer = data;
       }
     );
+  }
+
+  private getProject(){
+    this.http.get<ResponseData>(AppSettings.API_ENDPOINT + 'project/current?1000')
+    .map(data=>{
+      return data.data;
+    }).subscribe(data=>{
+      this.project = data.docs;
+      console.log(this.project);
+    });
+    
   }
   
 
