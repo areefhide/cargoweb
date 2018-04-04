@@ -27,6 +27,7 @@ import { PengirimanListComponent } from './components/pengiriman/pengiriman-list
 import { PengirimanComponent } from './components/pengiriman/pengiriman/pengiriman.component';
 import { CustomerComponent } from './components/customer/customer/customer.component';
 import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
+import { PrintComponent } from './components/pengiriman/print/print.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { CustomerListComponent } from './components/customer/customer-list/custo
     PengirimanListComponent,
     PengirimanComponent,
     CustomerComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    PrintComponent
   ],
   imports: [
     BrowserModule,

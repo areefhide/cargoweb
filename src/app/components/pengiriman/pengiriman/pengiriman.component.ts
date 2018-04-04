@@ -105,6 +105,7 @@ export class PengirimanComponent implements OnInit {
     }).subscribe(
       data =>{
         this.paket= data as Paket;
+        this.router.navigate(['PaketPrint',this.paket._id]);
       }
     )
   }

@@ -15,6 +15,7 @@ import {ProjectComponent} from './components/projects/project/project.component'
 //pengiriman
 import {PengirimanComponent} from './components/pengiriman/pengiriman/pengiriman.component';
 import {PengirimanListComponent} from './components/pengiriman/pengiriman-list/pengiriman-list.component';
+import {PrintComponent} from './components/pengiriman/print/print.component';
 //mitra
 import {AgentListComponent} from './components/agent/agent-list/agent-list.component';
 import {AgentComponent} from './components/agent/agent/agent.component';
@@ -44,7 +45,8 @@ const routes: Routes = [
       {path: 'KurirList',component: KurirListComponent}
     ]
   },
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'PaketPrint/:id',component: PrintComponent}
 ];
 
 @NgModule({
