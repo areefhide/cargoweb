@@ -21,6 +21,9 @@ import {AgentComponent} from './components/agent/agent/agent.component';
 //customer
 import { CustomerComponent } from './components/customer/customer/customer.component';
 import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
+//user
+import {KurirComponent} from './components/kurir/kurir/kurir.component';
+import {KurirListComponent} from './components/kurir/kurir-list/kurir-list.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,canActivate:[AuthGuard],canActivateChild: [AuthGuard],
@@ -36,7 +39,9 @@ const routes: Routes = [
       {path: 'Mitra', component: AgentComponent},
       {path: 'MitraList', component: AgentListComponent},
       {path: 'Customer', component: CustomerComponent},
-      {path: 'CustomerList',component: CustomerListComponent}
+      {path: 'CustomerList',component: CustomerListComponent},
+      {path: 'Kurir', component: KurirComponent},
+      {path: 'KurirList',component: KurirListComponent}
     ]
   },
   {path: 'login', component: LoginComponent}
