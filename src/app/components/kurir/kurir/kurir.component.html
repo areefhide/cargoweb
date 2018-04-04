@@ -1,3 +1,41 @@
-<p>
-  kurir works!
-</p>
+<section class="content-header">
+  <h1>
+    Kurir
+    <small>List</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Kurir</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-primary">
+        <div class="box-header">
+          <h3 class="box-title">Paket</h3>
+        </div>
+        <div class="box-body">
+          <div class="form-group col-md-3">
+            <label for="">Agent</label>
+            <select [ngModelOptions]="{standalone: true}" [(ngModel)]="kurir.MitraId" name="kurir.MitraId" class="form-control">
+              <option *ngFor="let item of agen" [ngValue]="item._id">{{item.nama}}</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">Name</label>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="kurir.nama" name="kurir.nama" class="form-control">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">Username</label>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="username" name="username" class="form-control">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="">Password</label>
+            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="password" name="password" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -20,6 +20,7 @@ export class AgentComponent implements OnInit {
   mitra: Agent = new Agent();
   username: string = "";
   password: string = "";  
+  role: string ="agen";
   user: User;
   constructor(private router: Router, private http: HttpClient) { }
 
@@ -43,7 +44,7 @@ export class AgentComponent implements OnInit {
   }
 
   private createUser(){
-    this.http.post<ResponseCreate>(AppSettings.API_ENDPOINT + 'login/register',{username: this.username,password: this.password})
+    this.http.post<ResponseCreate>(AppSettings.API_ENDPOINT + 'login/register',{username: this.username,password: this.password,role: this.role})
     .map(data=>{
       return data;
     }).subscribe(data=> {
