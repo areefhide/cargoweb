@@ -1,3 +1,36 @@
-<p>
-  kurir-list works!
-</p>
+<section class="content-header">
+  <h1>
+    Kurir
+    <small>List</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Kurir</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Kurir List</h3>
+            <div class="box-tools"><a [routerLink]="['/Kurir']" class="btn btn-default"><i class="fa fa-plus"></i></a></div>
+        </div>
+        <div class="box-body">
+          <table class="table table-bordered">
+            <tr>
+              <th>#</th>
+              <th>Nama</th>
+              <th></th>
+            </tr>
+            <tr *ngFor="let item of kurir; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{item.nama}}</td>
+              <td><a class="btn btn-default"><i class="fa fa-minus"></i></a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

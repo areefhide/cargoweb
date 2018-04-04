@@ -1,4 +1,6 @@
+import {ItemContent} from './item-content';
 export class Paket {
+    _id: string;
     company: String;
     pengirim: String;
     asal: String;
@@ -11,4 +13,5 @@ export class Paket {
     projectId: String;
     status: String;
     islunas: Boolean;
+    details: ItemContent[];
 }

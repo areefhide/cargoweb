@@ -8,6 +8,7 @@ import { AppSettings } from '../../../class/app-settings';
 import { ResponseData } from '../../../class/response';
 import {Agent} from '../../../class/agent';
 import {Paket} from '../../../class/paket';
+import { ResponseCreate } from '../../../class/response-create';
 
 @Component({
   selector: 'app-pengiriman',
@@ -24,6 +25,7 @@ export class PengirimanComponent implements OnInit {
   paid = true;
   debt = false;
   paket: Paket;
+  id: string = "";
   constructor(private router: Router, private http: HttpClient) { 
     this.item = new ItemContent();
     this.paket = new Paket();
@@ -93,6 +95,18 @@ export class PengirimanComponent implements OnInit {
       console.log(this.project);
     });
     
+  }
+
+  create(){
+    this.paket.details = this.items;
+    this.http.post<ResponseCreate>(AppSettings.API_ENDPOINT + 'paket',this.paket)
+    .map(data=>{
+      return data.data;
+    }).subscribe(
+      data =>{
+        this.paket= data as Paket;
+      }
+    )
   }
   
 

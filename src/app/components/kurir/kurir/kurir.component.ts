@@ -6,6 +6,8 @@ import 'rxjs/add/operator/map';
 import { AppSettings } from '../../../class/app-settings';
 import { ResponseData } from '../../../class/response';
 import {Kurir} from '../../../class/kurir';
+import {ResponseCreate} from '../../../class/response-create';
+import {User} from '../../../class/user';
 
 @Component({
   selector: 'app-kurir',
@@ -18,6 +20,7 @@ export class KurirComponent implements OnInit {
   kurir: Kurir;
   username: string = "";
   password: string = "";
+  user: User;
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() {
@@ -32,6 +35,32 @@ export class KurirComponent implements OnInit {
     }).subscribe(data =>{
       this.agen = data.docs;
     });
+  }
+
+  create(){
+    this.createUser()
+  }
+
+  private createUser(){
+    this.http.post<ResponseCreate>(AppSettings.API_ENDPOINT +'login/register',{username: this.username, password: this.password, role: 'kurir'})
+    .map(data=>{
+      return data;
+    }).subscribe(data=>{
+      this.user = data.data as User;
+      this.kurir.userId = this.user._id;
+      this.createKurir();
+    });
+  }
+
+  private createKurir(){
+    this.http.post<ResponseCreate>(AppSettings.API_ENDPOINT + 'kurir', this.kurir)
+    .map(data=>{
+      return data;
+    }).subscribe(
+      data=>{
+        this.router.navigate(['/KurirList']);
+      }
+    )
   }
 
 }
