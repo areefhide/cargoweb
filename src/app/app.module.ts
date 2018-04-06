@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import {AngularMultiSelectModule} from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
+import {AuthInterceptor} from './auth/auth-interceptor';
 
 import { AppRoutingModule } from './app-routing.module';
 import {AuthGuard} from './auth/auth.guard';
@@ -60,7 +61,8 @@ import { PrintComponent } from './components/pengiriman/print/print.component';
   ],
   providers: [
     AuthService,AuthGuard,CompanyService,
-    ProjectService
+    ProjectService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
