@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {ItemContent} from '../../../class/item-content';
+import {Router, ActivatedRoute} from '@angular/router';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import { AppSettings } from '../../../class/app-settings';
+import { ResponseData } from '../../../class/response';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-pengiriman-list',
@@ -7,9 +15,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PengirimanListComponent implements OnInit {
 
-  constructor() { }
+  pakets: any[];
+  constructor(private route: ActivatedRoute, private router: Router,private http: HttpClient) { }
 
   ngOnInit() {
+    this.loadAllData();
   }
 
+  private loadAllData(){
+    this.http.get<ResponseData>(AppSettings.API_ENDPOINT + 'paket')
+    .map(data=>{
+      return data.data;
+    }).subscribe(
+      data=>{
+        this.pakets = data.docs;
+        console.log(this.pakets);
+      }
+    );
+  }
 }

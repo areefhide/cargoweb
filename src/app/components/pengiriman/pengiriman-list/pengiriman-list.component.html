@@ -19,15 +19,22 @@
           <div class="box-body">
             <table class="table table-bordered">
               <tr>
-                <th style="width: 10px">#</th>
-                <th>Perusahaan</th> 
+                <th style="width: 10px">#</th>                 
                 <th>Pengirim</th>
                 <th>Asal</th>
                 <th>Tujuan</th> 
-                <th>Penerima</th>   
-                <th>Biaya Kirim</th>        
-                <th>Biaya Tambahan</th> 
-                <th style="width: 30px">#</th>    
+                <th>Penerima</th>  
+                <th>Tgl Pengiriman</th> 
+                <th style="width: 30px"></th>    
+              </tr>
+              <tr *ngFor="let item of pakets; let i = index">
+                <td>{{i+1}}</td>                
+                <td>{{item.pengirim.nama}}</td>
+                <td>{{item.asal}}</td>
+                <td>{{item.tujuan}}</td>
+                <td>{{item.penerima.nama}}</td>                
+                <td>{{item.tanggal | date: "mediumDate"}}</td>
+                <td><a class="btn btn-default"><i class="fa fa-minus"></i></a></td>
               </tr>
             </table>
           </div>
