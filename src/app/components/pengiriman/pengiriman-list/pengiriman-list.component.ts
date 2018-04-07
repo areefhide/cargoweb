@@ -33,4 +33,7 @@ export class PengirimanListComponent implements OnInit {
       }
     );
   }
+  print(id: string){
+    this.router.navigate(['PaketPrint',id]);
+  }
 }
