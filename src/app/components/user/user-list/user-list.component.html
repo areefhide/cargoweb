@@ -28,7 +28,7 @@
                 <tr *ngFor="let user of users">
                   <td>{{user.username}}</td>
                   <td>{{user.role}}</td>
-                  <td><a (click)="editUser(user.Id);" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                  <td><a (click)="editUser(user._id);" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
                 </tr>
               </table>
             </div>

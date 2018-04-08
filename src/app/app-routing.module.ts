@@ -45,7 +45,7 @@ const routes: Routes = [
       {path: 'CustomerList',component: CustomerListComponent},
       {path: 'Kurir', component: KurirComponent},
       {path: 'KurirList',component: KurirListComponent},
-      {path: 'User', component: UserComponent},
+      // {path: 'User', component: UserComponent},
       {path: 'User/:id', component: UserComponent},
       {path: 'UserList', component: UserListComponent}
     ]

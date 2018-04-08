@@ -33,6 +33,7 @@ export class UserListComponent implements OnInit {
   }
 
   editUser(id){
+    console.log(id);
     this.router.navigate(['User',id]);
   }
 
