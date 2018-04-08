@@ -50,7 +50,7 @@ export class AgentComponent implements OnInit {
     }).subscribe(data=> {
       if(data.status == 200){
         this.user = data.data as User;
-        this.mitra.userid = this.user._id;
+        this.mitra.username = this.user.username;
         console.log(this.user);
         this.createMitra();
       }else{
