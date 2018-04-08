@@ -22,10 +22,12 @@ import {AgentComponent} from './components/agent/agent/agent.component';
 //customer
 import { CustomerComponent } from './components/customer/customer/customer.component';
 import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
-//user
+//kurir
 import {KurirComponent} from './components/kurir/kurir/kurir.component';
 import {KurirListComponent} from './components/kurir/kurir-list/kurir-list.component';
-
+//user
+import { UserComponent} from './components/user/user/user.component';
+import {UserListComponent } from './components/user/user-list/user-list.component';
 const routes: Routes = [
   {path: '', component: HomeComponent,canActivate:[AuthGuard],canActivateChild: [AuthGuard],
     children:[
@@ -42,7 +44,10 @@ const routes: Routes = [
       {path: 'Customer', component: CustomerComponent},
       {path: 'CustomerList',component: CustomerListComponent},
       {path: 'Kurir', component: KurirComponent},
-      {path: 'KurirList',component: KurirListComponent}
+      {path: 'KurirList',component: KurirListComponent},
+      {path: 'User', component: UserComponent},
+      {path: 'User/:id', component: UserComponent},
+      {path: 'UserList', component: UserListComponent}
     ]
   },
   {path: 'login', component: LoginComponent},
