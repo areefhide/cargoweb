@@ -29,6 +29,8 @@ import { PengirimanComponent } from './components/pengiriman/pengiriman/pengirim
 import { CustomerComponent } from './components/customer/customer/customer.component';
 import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
 import { PrintComponent } from './components/pengiriman/print/print.component';
+import { UserListComponent } from './components/user/user-list/user-list.component';
+import { UserComponent } from './components/user/user/user.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { PrintComponent } from './components/pengiriman/print/print.component';
     PengirimanComponent,
     CustomerComponent,
     CustomerListComponent,
-    PrintComponent
+    PrintComponent,
+    UserListComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
