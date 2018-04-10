@@ -33,17 +33,18 @@ export class UserComponent implements OnInit {
     .map(data=>{
       return data.data;
     }).subscribe(data=>{
-      this.user = data as User;
+      this.user = data as User;      
       console.log(data);
     })
   }
 
   update(){
-    this.http.put<ResponseCreate>(AppSettings.API_ENDPOINT + 'users/' + this.id,{password: this.password})
+    this.http.put<ResponseCreate>(AppSettings.API_ENDPOINT + 'users/' + this.id,{password: this.password,role: this.user.role})
     .map(data=>{
       return data.data;
     }).subscribe(
       data=>{
+        this.router.navigate(['/UserList']);
         console.log(data);
       }
     )
