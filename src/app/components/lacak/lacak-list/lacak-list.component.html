@@ -36,8 +36,7 @@
                 <td>{{item.tanggal | date: "mediumDate"}}</td>
                 <td>{{item.status}}</td>
                 <td>
-                  <a class="btn btn-default"><i class="fa fa-minus"></i></a>
-                  <a (click)= "print(item._id)"class="btn btn-success"><i class="fa fa-print"></i></a>
+                  <a (click)="detail(item._id);" class="btn btn-success"><i class="fa fa-edit"></i></a>                  
                 </td>
               </tr>
             </table>

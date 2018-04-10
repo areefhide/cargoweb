@@ -34,6 +34,7 @@ import {UserListComponent } from './components/user/user-list/user-list.componen
 import {AdminComponent} from './components/user/admin/admin.component';
 //lacak
 import {LacakListComponent} from './components/lacak/lacak-list/lacak-list.component';
+import { LacakDetailComponent } from './components/lacak/lacak-detail/lacak-detail.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,canActivate:[AuthGuard],canActivateChild: [AuthGuard],
@@ -58,7 +59,8 @@ const routes: Routes = [
       {path: 'User', component: AdminComponent},
       {path: 'User/:id', component: UserComponent},
       {path: 'UserList', component: UserListComponent},
-      {path: 'Lacak', component: LacakListComponent}
+      {path: 'Lacak', component: LacakListComponent},
+      {path: 'Lacak/:id', component: LacakDetailComponent}
     ]
   },
   {path: 'login', component: LoginComponent},

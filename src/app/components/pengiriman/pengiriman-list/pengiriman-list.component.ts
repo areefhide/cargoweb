@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import { AppSettings } from '../../../class/app-settings';
 import { ResponseData } from '../../../class/response';
 import { DatePipe } from '@angular/common';
+import { ResponseCreate } from '../../../class/response-create';
 
 @Component({
   selector: 'app-pengiriman-list',
@@ -35,5 +36,16 @@ export class PengirimanListComponent implements OnInit {
   }
   print(id: string){
     this.router.navigate(['PaketPrint',id]);
+  }
+
+  delete(id: string){
+    this.http.delete<ResponseCreate>(AppSettings.API_ENDPOINT + 'paket/'+ id)
+    .map(data=>{
+      return data.data;
+    }).subscribe(
+      data=>{
+        this.loadAllData();
+      }
+    );
   }
 }

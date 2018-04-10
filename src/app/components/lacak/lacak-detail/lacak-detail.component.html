@@ -1,0 +1,67 @@
+<section class="content-header">
+    <h1>
+      Pengiriman
+      <small>lacak</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Lacak</li>
+    </ol>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title">Paket</h3>
+            </div>
+            <div class="box-body">
+              <div class="form-group col-md-3">
+                  <label for="">Origin</label>
+                  <input type="text" name="paket.asal" [(ngModel)]="paket.asal" [ngModelOptions]="{standalone: true}" readonly="readonly" class="form-control">
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="">Agent</label>
+                  <input type="text" name="paket.agen" [(ngModel)]="paket.agen" [ngModelOptions]="{standalone: true}" readonly="readonly" class="form-control">
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="">Destination</label>
+                  <input type="text" name="paket.tujuan" [(ngModel)]="paket.tujuan" [ngModelOptions]="{standalone: true}" readonly="readonly" class="form-control">
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="">Date</label>
+                  <label class="form-control">{{paket.tanggal | date: "mediumDate"}}</label>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box box-primary">
+          <div class="box-body">
+              <div class="row invoice-info">
+                  <div class="col-sm-6 invoice-col">
+                      From
+                      <address>
+                        <strong>{{paket.pengirim.nama}}</strong><br>
+                        {{paket.pengirim.alamat}}<br>
+                        {{paket.pengirim.perusahaan}}<br>
+                        {{paket.pengirim.telepon}}             
+                      </address>
+                  </div>
+                  <div class="col-sm-6 invoice-col">
+                      To
+                      <address>
+                        <strong>{{paket.penerima.nama}}</strong><br>
+                        {{paket.penerima.alamat}}<br>
+                        {{paket.penerima.perusahaan}}<br>
+                        {{paket.penerima.telepon}}             
+                      </address>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

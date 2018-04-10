@@ -18,6 +18,7 @@ export class LacakListComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router,private http: HttpClient) { }
 
   ngOnInit() {
+    this.loadAllData();
   }
 
   private loadAllData(){
@@ -30,6 +31,10 @@ export class LacakListComponent implements OnInit {
         console.log(this.pakets);
       }
     );
+  }
+
+  detail(id: string){
+    this.router.navigate(['/Lacak',id]);
   }
 
 }

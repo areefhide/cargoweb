@@ -37,6 +37,7 @@ import { AdminComponent } from './components/user/admin/admin.component';
 import { CustomerEditComponent } from './components/customer/customer-edit/customer-edit.component';
 import { EditKurirComponent } from './components/kurir/edit-kurir/edit-kurir.component';
 import { EditAgentComponent } from './components/agent/edit-agent/edit-agent.component';
+import { LacakDetailComponent } from './components/lacak/lacak-detail/lacak-detail.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { EditAgentComponent } from './components/agent/edit-agent/edit-agent.com
     AdminComponent,
     CustomerEditComponent,
     EditKurirComponent,
-    EditAgentComponent    
+    EditAgentComponent,
+    LacakDetailComponent    
   ],
   imports: [
     BrowserModule,

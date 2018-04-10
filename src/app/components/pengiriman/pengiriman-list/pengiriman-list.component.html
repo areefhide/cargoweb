@@ -35,7 +35,7 @@
                 <td>{{item.penerima.nama}}</td>                
                 <td>{{item.tanggal | date: "mediumDate"}}</td>
                 <td>
-                  <a class="btn btn-default"><i class="fa fa-minus"></i></a>
+                  <a (click)="delete(item._id)" class="btn btn-danger"><i class="fa fa-minus"></i></a>
                   <a (click)= "print(item._id)"class="btn btn-success"><i class="fa fa-print"></i></a>
                 </td>
               </tr>
