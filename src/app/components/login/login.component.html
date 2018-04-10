@@ -1,10 +1,15 @@
 <div class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Admin</b>LTE</a>
+    <a href="#"><b>Cargo</b>Express</a>
   </div>
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <!-- <p class="login-box-msg">Sign in to start your session</p> -->
+    <div class="alert" [ngClass]="{'alert-danger': success === false, 'alert-info' : success === true}">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-info"></i> info!</h4>
+        {{message}}
+      </div>
     <form name="form" novalidate>
       <div class="form-group has-feedback">
         <input type="text" class="form-control" #username="ngModel"  [ngModelOptions]="{standalone: true}"  placeholder="username" [(ngModel)]="model.username" name="username">
@@ -24,7 +29,7 @@
         </div>
       <!-- /.col -->
       </div>
-  </form>
+    </form>
   </div>
 </div>
 </div>

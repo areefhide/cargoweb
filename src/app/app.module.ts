@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import {AngularMultiSelectModule} from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import {AuthInterceptor} from './auth/auth-interceptor';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import {AuthGuard} from './auth/auth.guard';
@@ -32,7 +33,7 @@ import { PrintComponent } from './components/pengiriman/print/print.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserComponent } from './components/user/user/user.component';
 import { LacakListComponent } from './components/lacak/lacak-list/lacak-list.component';
-
+import { AdminComponent } from './components/user/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -56,14 +57,16 @@ import { LacakListComponent } from './components/lacak/lacak-list/lacak-list.com
     PrintComponent,
     UserListComponent,
     UserComponent,
-    LacakListComponent
+    LacakListComponent,
+    AdminComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AngularMultiSelectModule
+    AngularMultiSelectModule,
+    NgxPaginationModule
   ],
   providers: [
     AuthService,AuthGuard,CompanyService,

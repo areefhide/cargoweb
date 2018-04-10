@@ -28,6 +28,7 @@ import {KurirListComponent} from './components/kurir/kurir-list/kurir-list.compo
 //user
 import { UserComponent} from './components/user/user/user.component';
 import {UserListComponent } from './components/user/user-list/user-list.component';
+import {AdminComponent} from './components/user/admin/admin.component';
 //lacak
 import {LacakListComponent} from './components/lacak/lacak-list/lacak-list.component';
 
@@ -48,7 +49,7 @@ const routes: Routes = [
       {path: 'CustomerList',component: CustomerListComponent},
       {path: 'Kurir', component: KurirComponent},
       {path: 'KurirList',component: KurirListComponent},
-      // {path: 'User', component: UserComponent},
+      {path: 'User', component: AdminComponent},
       {path: 'User/:id', component: UserComponent},
       {path: 'UserList', component: UserListComponent},
       {path: 'Lacak', component: LacakListComponent}

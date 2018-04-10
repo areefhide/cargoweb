@@ -47,7 +47,7 @@ export class KurirComponent implements OnInit {
       return data;
     }).subscribe(data=>{
       this.user = data.data as User;
-      this.kurir.username = this.user.username;
+      this.kurir.userId = this.user._id;
       this.createKurir();
     });
   }
