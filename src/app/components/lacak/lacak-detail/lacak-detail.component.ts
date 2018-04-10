@@ -10,6 +10,7 @@ import {Agent} from '../../../class/agent';
 import {Paket} from '../../../class/paket';
 import { ResponseCreate } from '../../../class/response-create';
 
+
 @Component({
   selector: 'app-lacak-detail',
   templateUrl: './lacak-detail.component.html',
@@ -23,13 +24,19 @@ export class LacakDetailComponent implements OnInit {
 
     },
     penerima:{
-      
-    }
+
+    },
+    history:[
+
+    ]
   };
+  item: Paket;
+  status: string[] = ['Diterima Cargo','Dikirim ke Agen','Diterima Agen'];
   constructor(private route: ActivatedRoute,private router: Router, private http: HttpClient) {
     this.route.params.subscribe(params=>{
       this.id = params['id'];      
       this,this.getPaket();
+      this.item = new Paket();
     });
    }
 
@@ -43,9 +50,25 @@ export class LacakDetailComponent implements OnInit {
     }).subscribe(
       data=> {        
         this.paket = data;    
+        this.item = data as Paket;
         console.log(this.paket);            
       }
     );
+  }
+  next(){
+    var idx = this.status.indexOf(this.item.status.toString());
+    if(idx <2){
+      var status = this.status[idx+1];
+      this.http.put<ResponseCreate>(AppSettings.API_ENDPOINT + 'paket/' + this.id + '/status',{status: status})
+        .map(data=>{
+          return data.data;
+        }).subscribe(data=>{
+          this.getPaket();
+        });
+    }   
+  }
+  exit(){
+    this.router.navigate(['/Lacak']);
   }
 
 }

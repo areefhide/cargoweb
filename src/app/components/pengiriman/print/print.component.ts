@@ -22,6 +22,9 @@ export class PrintComponent implements OnInit {
   paket: any = {
     pengirim: {
 
+    },
+    penerima:{
+      
     }
   };
   detail : any;
