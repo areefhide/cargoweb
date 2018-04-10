@@ -1,0 +1,52 @@
+<section class="content-header">
+    <h1>
+      Agent
+      <small>Detail</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Agent</li>
+    </ol>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">Agent</h3>
+            <div class="box-tools"><a [routerLink]="['/MitraList']" class="btn btn-default"><i class="fa fa-arrow-left"></i></a></div>
+          </div>
+          <div class="box-body">
+            <form name="form" novalidate>
+              <div class="form-group has-feedback">
+                <label for="exampleInputEmail1">Agent Name</label>
+                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="mitra.nama"  name="mitra.nama">
+                <span class="glyphicon glyphicon-book form-control-feedback"></span>
+              </div>
+              <div class="form-group has-feedback">
+                <label for="exampleInputEmail1">PIC Name</label>
+                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="mitra.pic"  name="mitra.pic">
+                <span class="glyphicon glyphicon-book form-control-feedback"></span>
+              </div>
+              <div class="form-group has-feedback">
+                <label for="wilayah">City</label>
+                <select name="wilayah" multiple  class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="mitra.wilayah">
+                  <option *ngFor="let item of cities" [ngValue]="item.nama">{{item.nama}}</option>
+                </select>
+                <span class="form-control-feedback"></span>
+              </div>              
+              <div class="row">
+                  <div class="col-xs-8">                    
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-xs-4">
+                    <button type="submit" (click)="create()" class="btn btn-primary btn-block btn-flat"><i class="fa fa-save"></i></button>
+                  </div>
+                <!-- /.col -->
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
