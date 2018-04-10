@@ -15,6 +15,8 @@ import { Data } from '../../../class/data';
 export class CustomerListComponent implements OnInit {
 
   customer: any[];
+  page: Number = 1;
+  maxPage:Number = 10;
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() {
@@ -22,12 +24,14 @@ export class CustomerListComponent implements OnInit {
   }
 
   private loadAllCustomer(){
-    this.http.get<ResponseData>(AppSettings.API_ENDPOINT + 'customer')
+    this.http.get<ResponseData>(AppSettings.API_ENDPOINT + 'customer?page='+ this.page.toString())
     .map(data=>{
       return data.data;
     }).subscribe(
       data=>{
         this.customer = data.docs;
+        this.page = data.page;
+        this.maxPage = data.pages;
       }
     );
   }
@@ -42,5 +46,17 @@ export class CustomerListComponent implements OnInit {
       }
     );
   }
-
+  prev(){
+    var page = (this.page > 1)? (this.page as number) -1: 1;
+    this.page = page;
+    this.loadAllCustomer();
+  }
+  next(){
+    var page = (this.page < this.maxPage)? (this.page as number) +1: this.maxPage;
+    this.page = page;
+    this.loadAllCustomer();
+  }
+  editCustomer(id:string){
+    this.router.navigate(['/Customer',id]);
+  }
 }

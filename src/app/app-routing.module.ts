@@ -22,6 +22,7 @@ import {AgentComponent} from './components/agent/agent/agent.component';
 //customer
 import { CustomerComponent } from './components/customer/customer/customer.component';
 import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
+import { CustomerEditComponent } from './components/customer/customer-edit/customer-edit.component';
 //kurir
 import {KurirComponent} from './components/kurir/kurir/kurir.component';
 import {KurirListComponent} from './components/kurir/kurir-list/kurir-list.component';
@@ -46,6 +47,7 @@ const routes: Routes = [
       {path: 'Mitra', component: AgentComponent},
       {path: 'MitraList', component: AgentListComponent},
       {path: 'Customer', component: CustomerComponent},
+      {path: 'Customer/:id', component: CustomerEditComponent},
       {path: 'CustomerList',component: CustomerListComponent},
       {path: 'Kurir', component: KurirComponent},
       {path: 'KurirList',component: KurirListComponent},

@@ -32,9 +32,21 @@
               <td>{{item.alamat}}</td>
               <td>{{item.perusahaan}}</td>
               <td>{{item.telepon}}</td>
-              <td><a class="btn btn-default"(click)="deleteCustomer(item._id)"><i class="fa fa-minus"></i></a></td>
+              <td>
+                <a class="btn btn-success"(click)="editCustomer(item._id)"><i class="fa fa-edit"></i></a>
+                <a class="btn btn-danger"(click)="deleteCustomer(item._id)"><i class="fa fa-minus"></i></a>                
+              </td>
             </tr>
           </table>
+          <div class="row">
+            <div class="col-md-12">
+                <div class="btn-group">
+                    <button type="button" (click)="prev();" class="btn btn-default"><i class="fa fa-angle-double-left"></i></button>
+                    <button type="button" class="btn btn-default">{{page}}</button>
+                    <button type="button" (click)="next();" class="btn btn-default"><i class="fa fa-angle-double-right"></i></button>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
