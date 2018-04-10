@@ -28,6 +28,9 @@ import {KurirListComponent} from './components/kurir/kurir-list/kurir-list.compo
 //user
 import { UserComponent} from './components/user/user/user.component';
 import {UserListComponent } from './components/user/user-list/user-list.component';
+//lacak
+import {LacakListComponent} from './components/lacak/lacak-list/lacak-list.component';
+
 const routes: Routes = [
   {path: '', component: HomeComponent,canActivate:[AuthGuard],canActivateChild: [AuthGuard],
     children:[
@@ -47,7 +50,8 @@ const routes: Routes = [
       {path: 'KurirList',component: KurirListComponent},
       // {path: 'User', component: UserComponent},
       {path: 'User/:id', component: UserComponent},
-      {path: 'UserList', component: UserListComponent}
+      {path: 'UserList', component: UserListComponent},
+      {path: 'Lacak', component: LacakListComponent}
     ]
   },
   {path: 'login', component: LoginComponent},

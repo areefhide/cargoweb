@@ -31,6 +31,7 @@ import { CustomerListComponent } from './components/customer/customer-list/custo
 import { PrintComponent } from './components/pengiriman/print/print.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
 import { UserComponent } from './components/user/user/user.component';
+import { LacakListComponent } from './components/lacak/lacak-list/lacak-list.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { UserComponent } from './components/user/user/user.component';
     CustomerListComponent,
     PrintComponent,
     UserListComponent,
-    UserComponent
+    UserComponent,
+    LacakListComponent
   ],
   imports: [
     BrowserModule,
