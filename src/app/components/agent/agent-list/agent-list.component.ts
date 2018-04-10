@@ -32,7 +32,7 @@ export class AgentListComponent implements OnInit {
     });
   }
 
-  private deleteAgent(id){
+  deleteAgent(id){
     this.http.delete<ResponseData>(AppSettings.API_ENDPOINT + 'mitra/' + id)
     .map(data=>{
       return data;
@@ -40,6 +40,10 @@ export class AgentListComponent implements OnInit {
       this.loadAllAgent();
     });
     console.log(id);
+  }
+
+  editMitra(id: string){
+    this.router.navigate(['Mitra',id]);
   }
 
 }
