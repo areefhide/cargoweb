@@ -35,6 +35,7 @@ import { UserComponent } from './components/user/user/user.component';
 import { LacakListComponent } from './components/lacak/lacak-list/lacak-list.component';
 import { AdminComponent } from './components/user/admin/admin.component';
 import { CustomerEditComponent } from './components/customer/customer-edit/customer-edit.component';
+import { EditKurirComponent } from './components/kurir/edit-kurir/edit-kurir.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { CustomerEditComponent } from './components/customer/customer-edit/custo
     UserComponent,
     LacakListComponent,
     AdminComponent,
-    CustomerEditComponent    
+    CustomerEditComponent,
+    EditKurirComponent    
   ],
   imports: [
     BrowserModule,

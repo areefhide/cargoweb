@@ -47,7 +47,7 @@ export class KurirListComponent implements OnInit {
   }
 
   editKurir(id: string){
-    
+    this.router.navigate(['Kurir',id]);
   }
   deleteKurir(id: string){
     this.http.delete<ResponseCreate>(AppSettings.API_ENDPOINT + 'kurir/' + id)

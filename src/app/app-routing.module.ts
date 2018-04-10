@@ -26,6 +26,7 @@ import { CustomerEditComponent } from './components/customer/customer-edit/custo
 //kurir
 import {KurirComponent} from './components/kurir/kurir/kurir.component';
 import {KurirListComponent} from './components/kurir/kurir-list/kurir-list.component';
+import { EditKurirComponent } from './components/kurir/edit-kurir/edit-kurir.component';
 //user
 import { UserComponent} from './components/user/user/user.component';
 import {UserListComponent } from './components/user/user-list/user-list.component';
@@ -50,6 +51,7 @@ const routes: Routes = [
       {path: 'Customer/:id', component: CustomerEditComponent},
       {path: 'CustomerList',component: CustomerListComponent},
       {path: 'Kurir', component: KurirComponent},
+      {path: 'Kurir/:id',component:EditKurirComponent},
       {path: 'KurirList',component: KurirListComponent},
       {path: 'User', component: AdminComponent},
       {path: 'User/:id', component: UserComponent},
